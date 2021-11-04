@@ -6,14 +6,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import login from './screens/login';
 import signup from './screens/signup';
 import carts from './screens/carts';
+import homepage from './screens/homepage';
+
 
 export default function App() {
   const MainNavigator = createStackNavigator();
   return (
     <View style={{flex: 1}}>
       <NavigationContainer>
-        <MainNavigator.Navigator initialRouteName="login">
-          <MainNavigator.Screen name="Home" component={login}/>
+        <MainNavigator.Navigator  screenOptions={{headerShown: false}} initialRouteName="login">
+          <MainNavigator.Screen name="Login" component={login}/>
+          <MainNavigator.Screen name="Homepage" component={homepage}/> 
           <MainNavigator.Screen name="Carts" component={carts}/>
           <MainNavigator.Screen name="Signup" component={signup}/>
           

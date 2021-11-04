@@ -73,7 +73,7 @@ export default function login({navigation}){
 						    />
 							</View>
 						</View>
-						<TouchableOpacity>
+						<TouchableOpacity onPress={() =>navigation.navigate('homepage')} >
 						  <Text 
 							  style={{
 								  marginLeft: 10, 
@@ -85,7 +85,7 @@ export default function login({navigation}){
 									}}>Log in</Text>
 						</TouchableOpacity>
 						<Text style={{fontSize: 12}}>Not yet registered?
-                <TouchableOpacity onPress={()=> navigation.navigate('signup')}>
+                <TouchableOpacity onPress={()=> navigation.navigate('homepage')}>
                     <Text style={{color: "violet", fontWeight: 500}}> SignUp</Text>
                 </TouchableOpacity>
             </Text>
